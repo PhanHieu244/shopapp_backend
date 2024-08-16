@@ -1,0 +1,122 @@
+spring:
+  application:
+    name: apple-device-service
+
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3309/apple_device_service
+  jpa:
+    hibernate:
+      ddl-auto: none
+  data:
+    redis:
+      host: localhost
+      port: 6380
+      password: eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+
+app:
+  service:
+    cors:
+      baseUrl: http://localhost:3000
+      allowedMethods:
+          - GET
+          - POST
+          - PUT
+          - DELETE
+          - PATCH
+  security:
+    jwt:
+      secret: JHD2p1EolyuH3K6Gjz05onMO5hRT8CYHJHD2p1EolyuH3K6Gjz05onMO5hRT8CYH
+      expiration: 86400000
+      header: Authorization
+      prefix: Bearer
+    filter:
+      publicUrls:
+        - first: /ops/api/v1/auth/login
+          second: POST
+        - first: /web/api/v1/product_details/\d+
+          second: GET
+        - first: /web/api/v1/product_details
+          second: GET
+        - first: /web/api/v1/product_details/details
+          second: GET
+        - first: /web/api/v1/auth/sign-up
+          second: POST
+        - first: /web/api/v1/auth/login
+          second: POST
+        - first: /web/api/v1/blogs
+          second: GET
+        - first: /web/api/v1/blogs/details
+          second: GET
+        - first: /web/api/v1/warranties
+          second: GET
+      protectedUrls:
+        - urlPattern: /ops/api/v1/colors/**
+          roles:
+            - ADMIN
+            - MODERATOR
+        - urlPattern: /ops/api/v1/storages/**
+          roles:
+            - ADMIN
+            - MODERATOR
+        - urlPattern: /ops/api/v1/types/**
+          roles:
+            - ADMIN
+            - MODERATOR
+        - urlPattern: /ops/api/v1/products/**
+          roles:
+            - ADMIN
+            - MODERATOR
+        - urlPattern: /ops/api/v1/product_details/**
+          roles:
+            - ADMIN
+            - MODERATOR
+        - urlPattern: /ops/api/v1/inventories/**
+          roles:
+            - ADMIN
+            - MODERATOR
+        - urlPattern: /ops/api/v1/auth/sign-up/**
+          roles:
+            - ADMIN
+        - urlPattern: /web/api/v1/carts/*
+          roles:
+            - ADMIN
+            - USER
+            - MODERATOR
+        - urlPattern: /web/api/v1/shipping_infos/*
+          roles:
+            - ADMIN
+            - USER
+            - MODERATOR
+        - urlPattern: /web/api/v1/orders/*
+          roles:
+            - ADMIN
+            - USER
+            - MODERATOR
+        - urlPattern: /ops/api/v1/orders/cancel/*
+          roles:
+            - ADMIN
+            - MODERATOR
+        - urlPattern: /ops/api/v1/orders/*
+          roles:
+            - ADMIN
+            - MODERATOR
+        - urlPattern: /ops/api/v1/orders/states/*
+          roles:
+            - MODERATOR
+        - urlPattern: /ops/api/v1/stats/all/*
+          roles:
+            - ADMIN
+        - urlPattern: /ops/api/v1/blogs/*
+          roles:
+              - ADMIN
+              - MODERATOR
+        - urlPattern: /ops/api/v1/stats/date/*
+          roles:
+            - ADMIN
+            - MODERATOR
+        - urlPattern: /ops/api/v1/warranties/*
+          roles:
+            - ADMIN
+            - MODERATOR

@@ -1,0 +1,2 @@
+api:
+  prefix : ${ops/api/v1}

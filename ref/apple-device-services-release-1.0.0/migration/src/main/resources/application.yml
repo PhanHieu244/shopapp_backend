@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: migration
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:mysql://localhost:3309/apple_device_service
+    username: root
+    password: 123456
+  liquibase:
+    change-log: classpath:/db/changelog/changelog.xml
+    enabled: true

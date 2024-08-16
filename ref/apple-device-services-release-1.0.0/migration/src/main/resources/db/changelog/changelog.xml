@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="000002_create_table_products.up" author="khaihust">
+        <sqlFile relativeToChangelogFile="true" path="../../db/mysql/000002_create_table_products.up.sql"/>
+    </changeSet>
+    <changeSet id="000003_create_table_product_details_table.up" author="khaihust">
+        <sqlFile relativeToChangelogFile="true" path="../../db/mysql/000003_create_table_product_details_table.up.sql"/>
+    </changeSet>
+    <changeSet id="000004_create_table_types.up" author="khaihust">
+        <sqlFile relativeToChangelogFile="true" path="../../db/mysql/000004_create_table_types.up.sql"/>
+    </changeSet>
+    <changeSet id="000005_create_table_description_images.up" author="khaihust">
+        <sqlFile relativeToChangelogFile="true" path="../../db/mysql/000005_create_table_images.up.sql"/>
+    </changeSet>
+    <changeSet id="000006_add_column_banner_img_product_details.up" author="khaihust">
+        <sqlFile relativeToChangelogFile="true"
+                 path="../../db/mysql/000006_add_column_banner_img_name_product_details.up.sql"/>
+    </changeSet>
+    <changeSet id="000007_create_table_inventory.up" author="khaihust">
+        <sqlFile relativeToChangelogFile="true" path="../../db/mysql/000007_create_table_inventory.up.sql"/>
+    </changeSet>
+    <changeSet id="000008_create_table_user_auth.up" author="khaihust">
+        <sqlFile relativeToChangelogFile="true" path="../../db/mysql/000008_create_table_user_auth.up.sql"/>
+    </changeSet>
+    <changeSet id="000009_add_default_roles.up" author="khaihust">
+        <sqlFile relativeToChangelogFile="true" path="../../db/mysql/000009_add_default_roles.up.sql"/>
+    </changeSet>
+    <changeSet id="0000010_add_default_admin_user.up" author="khaihust">
+        <sqlFile relativeToChangelogFile="true" path="../../db/mysql/0000010_add_default_admin_user.up.sql"/>
+    </changeSet>
+    <changeSet id="0000011_create_table_cart.up" author="khaihust">
+        <sqlFile relativeToChangelogFile="true" path="../../db/mysql/0000011_create_table_cart.up.sql"/>
+    </changeSet>
+    <changeSet id="0000012_create_table_orders.up" author="khaihust">
+        <sqlFile relativeToChangelogFile="true" path="../../db/mysql/0000012_create_table_orders.up.sql"/>
+    </changeSet>
+    <changeSet id="0000013_create_table_order_lines.up" author="khaihust">
+        <sqlFile relativeToChangelogFile="true" path="../../db/mysql/0000013_create_table_order_lines.up.sql"/>
+    </changeSet>
+    <changeSet id="000014_create_table_shipping_info.up" author="khaihust">
+        <sqlFile relativeToChangelogFile="true" path="../../db/mysql/000014_create_table_shipping_info.up.sql"/>
+    </changeSet>
+    <changeSet id="000015_create_table_blogs.up" author="khaihust">
+        <sqlFile relativeToChangelogFile="true" path="../../db/mysql/000015_create_table_blogs.up.sql"/>
+    </changeSet>
+    <changeSet id="000016_add_column_banner_img_blogs_table.up" author="khaihust">
+        <sqlFile relativeToChangelogFile="true" path="../../db/mysql/000016_add_column_banner_img_blogs_table.up.sql"/>
+    </changeSet>
+    <changeSet id="000017_alter_column_total_price_table_orders.up" author="khaihust">
+        <sqlFile relativeToChangelogFile="true" path="../../db/mysql/000017_alter_column_total_price_table_orders.up.sql"/>
+    </changeSet>
+
+</databaseChangeLog>
